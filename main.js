@@ -20,8 +20,8 @@ document.querySelector('.btn').addEventListener('click', function () {
         let foundBooks = data.books.length;
         let allBooks = data.total;
         let arrBooks = data.books;
-
-        document.querySelector('.result').innerHTML = `<p> first ${foundBooks} books from ${allBooks}</p>`
+ document.querySelector('.result').innerHTML = `<p> first ${foundBooks} books from ${allBooks}</p>`
+        
         for (let items of arrBooks) {
           document.querySelector('.result').innerHTML += `<a href="${items.url}" > ${items.title}</a><br>`
         }
