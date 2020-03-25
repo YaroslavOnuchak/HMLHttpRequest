@@ -23,7 +23,7 @@ document.querySelector('.btn').addEventListener('click', function () {
         document.querySelector('.result').innerHTML = `<p> first ${foundBooks} books from ${allBooks}</p>`
 
         for (let items of arrBooks) {
-          document.querySelector('.result').innerHTML += `<a href="${items.url}" title="${items.description}"> ${items.title}</a><br>`
+          document.querySelector('.result').innerHTML += `<a href="https://itbook.store/books/${items.isbn}" title="${items.description}"> ${items.title}</a><br>`
         }
       } else {
         document.querySelector('.result').innerText = 'no result'
