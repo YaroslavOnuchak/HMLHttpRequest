@@ -11,10 +11,10 @@ document.querySelector('.btn').addEventListener('click', function () {
   htmlReques.onload = () => {
     if (htmlReques.readyState == 4 && htmlReques.status == 200) {
       let data = JSON.parse(htmlReques.responseText.toLowerCase());
-      console.log(data)
-      console.log(data.total)
-      console.log(htmlReques.readyState)
-      console.log(htmlReques.status)
+      // console.log(data)
+      // console.log(data.total)
+      // console.log(htmlReques.readyState)
+      // console.log(htmlReques.status)
 
       if (data.total > 0) {
         let foundBooks = data.books.length;
