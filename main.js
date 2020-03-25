@@ -11,19 +11,19 @@ document.querySelector('.btn').addEventListener('click', function () {
   htmlReques.onload = () => {
     if (htmlReques.readyState == 4 && htmlReques.status == 200) {
       let data = JSON.parse(htmlReques.responseText.toLowerCase());
-      // console.log(data)
-      // console.log(data.total)
-      // console.log(htmlReques.readyState)
-      // console.log(htmlReques.status)
+      console.log(data)
+      console.log(data.total)
+      console.log(htmlReques.readyState)
+      console.log(htmlReques.status)
 
       if (data.total > 0) {
         let foundBooks = data.books.length;
         let allBooks = data.total;
         let arrBooks = data.books;
- document.querySelector('.result').innerHTML = `<p> first ${foundBooks} books from ${allBooks}</p>`
-        
+        document.querySelector('.result').innerHTML = `<p> first ${foundBooks} books from ${allBooks}</p>`
+
         for (let items of arrBooks) {
-          document.querySelector('.result').innerHTML += `<a href="${items.url}" > ${items.title}</a><br>`
+          document.querySelector('.result').innerHTML += `<a href="${items.url}" title="${items.description}"> ${items.title}</a><br>`
         }
       } else {
         document.querySelector('.result').innerText = 'no result'
